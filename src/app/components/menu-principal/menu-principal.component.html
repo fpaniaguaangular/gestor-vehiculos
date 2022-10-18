@@ -1,7 +1,8 @@
 <nav>
     <ul>
-        <li>Listado</li>
-        <li>Nuevo</li>
+        <li><a routerLink="./listado" routerLinkActive="enlace-activo">Listado</a></li>
+        <li><a [routerLink]="['./crear']" [routerLinkActive]="['enlace-activo']">Nuevo</a></li>
+        <li><a [routerLink]="enlace" routerLinkActive="enlace-activo">Nuevo (desde atributo)</a></li>
         <li>Ayuda...</li>
     </ul>
 </nav>

@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuPrincipalComponent implements OnInit {
 
+  enlace:string="./crear";
+
   constructor() { }
 
   ngOnInit(): void {

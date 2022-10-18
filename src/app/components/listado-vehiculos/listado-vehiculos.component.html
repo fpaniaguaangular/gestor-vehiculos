@@ -1,1 +1,8 @@
-<p>listado-vehiculos works!</p>
+<main>
+    <article *ngFor="let vehiculo of vehiculos">
+        <div>{{vehiculo.id}}</div>
+        <div>{{vehiculo.nombre}}</div>
+        <div>{{vehiculo.descripcion}}</div>
+        <div><img [src]="vehiculo.imagen" width="400px"></div>
+    </article>
+</main>

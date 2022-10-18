@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-creador-vehiculos',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreadorVehiculosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private enrutador:Router) { }
 
   ngOnInit(): void {
+  }
+
+  public cancelar():void {
+    this.enrutador.navigateByUrl("/listado");
   }
 
 }

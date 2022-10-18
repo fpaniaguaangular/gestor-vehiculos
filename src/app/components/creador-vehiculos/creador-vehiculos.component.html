@@ -1,24 +1,27 @@
-<div id="formulario-creacion" class="mat-autocomplete-panel">
-    <div>
-        <mat-form-field appearance="fill">
-            <mat-label>Nombre</mat-label>
-            <input matInput>
-        </mat-form-field>
+<main>
+    <div id="formulario-creacion" class="mat-autocomplete-panel">
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Nombre</mat-label>
+                <input matInput>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Descripción</mat-label>
+                <textarea matInput rows="10"></textarea>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Imagen</mat-label>
+                <input matInput>
+            </mat-form-field>
+        </div>
+        <div id="contenedor-boton">
+            <button mat-raised-button color="accent" (click)="cancelar()">Cancelar</button>
+            &nbsp;
+            <button mat-raised-button color="primary">Crear</button>
+        </div>
     </div>
-    <div>
-        <mat-form-field appearance="fill">
-            <mat-label>Descripción</mat-label>
-            <textarea matInput rows="10"></textarea>
-        </mat-form-field>
-    </div>
-    <div>
-        <mat-form-field appearance="fill">
-            <mat-label>Imagen</mat-label>
-            <input matInput>
-        </mat-form-field>
-    </div>
-    <div id="contenedor-boton">
-        <button mat-raised-button color="primary">Crear</button>
-    </div>
-</div>
-<h2 class="theme-accent">LOQUESEA</h2>
+</main>

@@ -1,5 +1,21 @@
+nav {
+    width: 800px;
+    margin: auto;
+    height: 3em;
+    background-color: bisque;
+    margin-bottom: 2em;
+    color: black;
+}
+a {
+    color:red;
+}
 li{
     float:left;
     list-style: none; 
     margin: 13px 20px;
+}
+
+.enlace-activo {
+    font-weight: bolder;
+    color:green;
 }

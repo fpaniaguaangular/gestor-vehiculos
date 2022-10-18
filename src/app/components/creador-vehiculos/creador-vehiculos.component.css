@@ -11,3 +11,7 @@ mat-form-field {
 #contenedor-boton {
     text-align: right;
 }
+
+main {
+    clear: both;
+}
