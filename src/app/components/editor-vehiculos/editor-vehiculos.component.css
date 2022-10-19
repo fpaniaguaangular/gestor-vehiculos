@@ -1,0 +1,17 @@
+#formulario-creacion {
+    width: 900px;
+    margin:auto;
+    padding: 2em;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+#contenedor-boton {
+    text-align: right;
+}
+
+main {
+    clear: both;
+}

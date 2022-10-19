@@ -23,9 +23,6 @@ export class ListadoVehiculosComponent implements OnInit {
     );
     //HACER COSAS MIENTRAS ESPERO
 
-
-    
-
     /*this.clienteWS.findAll().subscribe({
       next(data) {
         this.vehiculos = data;
