@@ -10,7 +10,7 @@ import { ClienteWSService } from 'src/app/services/cliente-ws.service';
 })
 export class TablaVehiculosComponent implements OnInit {
   public vehiculos: Vehiculo[] = [];
-  displayedColumns: string[] = ['id', 'nombre', 'descripcion', 'imagen'];
+  displayedColumns: string[] = ['id', 'nombre', 'descripcion', 'imagen', 'accion'];
 
   constructor(private clienteWS: ClienteWSService, private enrutador:Router) { }
 
@@ -23,7 +23,13 @@ export class TablaVehiculosComponent implements OnInit {
   }
 
   editar(vehiculo:Vehiculo):void{
-    this.enrutador.navigate(['/editar/'+vehiculo.id+"/"+vehiculo.nombre]);
+    //Creando una ruta de navegación del tipo /editar/idVehiculo/nombreVehiculo/descripcionVehiculo/imagenVehiculo
+    //Creando el path con concatenaciones de cadenas
+    //this.enrutador.navigate(['/editar/'+vehiculo.id+"/"+vehiculo.nombre+"/"+vehiculo.descripcion+"/"+vehiculo.imagen]);
+    //Creando el path con TEMPLATE LITERAL
+    //this.enrutador.navigate([`/editar/${vehiculo.id}/${vehiculo.nombre}/${vehiculo.descripcion}/${vehiculo.imagen}`]);
+    //Creando el path con TEMPLATE LITERAL - Se asigna un nombre de imagen en 'hardcode' porque las barras (/) de la URL de la imagen provocan error
+    this.enrutador.navigate([`/editar/${vehiculo.id}/${vehiculo.nombre}/${vehiculo.descripcion}/notfound.png`]);
   }
 
 }

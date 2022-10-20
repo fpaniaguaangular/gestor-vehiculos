@@ -19,6 +19,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
 import { EditorVehiculosComponent } from './components/editor-vehiculos/editor-vehiculos.component';
+import { ListadoVehiculosSecuencialComponent } from './components/listado-vehiculos-secuencial/listado-vehiculos-secuencial.component';
+import { FichaVehiculoComponent } from './components/ficha-vehiculo/ficha-vehiculo.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { EditorVehiculosComponent } from './components/editor-vehiculos/editor-v
     C404Component,
     TablaVehiculosComponent,
     EditorVehiculosComponent,
+    ListadoVehiculosSecuencialComponent,
+    FichaVehiculoComponent,
   ],
   imports: [
     BrowserModule,

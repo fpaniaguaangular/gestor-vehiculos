@@ -1,8 +1,12 @@
 <main>
-    <article *ngFor="let vehiculo of vehiculos">
-        <div>{{vehiculo.id}}</div>
-        <div>{{vehiculo.nombre}}</div>
-        <div>{{vehiculo.descripcion}}</div>
-        <div><img [src]="vehiculo.imagen" width="400px"></div>
-    </article>
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Nombre</mat-label>
+            <input matInput (input)="filtrar()" [(ngModel)]="nombreBusqueda">
+        </mat-form-field>
+    </div>
+    
+    <section class="cards">
+        <app-ficha-vehiculo *ngFor="let vehiculo of vehiculos" [vehiculo]="vehiculo"></app-ficha-vehiculo>
+    </section>
 </main>

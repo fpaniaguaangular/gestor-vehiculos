@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { filter, from, map } from 'rxjs';
 import { Vehiculo } from 'src/app/models/vehiculo';
 import { ClienteWSService } from 'src/app/services/cliente-ws.service';
 
@@ -9,12 +10,15 @@ import { ClienteWSService } from 'src/app/services/cliente-ws.service';
 })
 export class ListadoVehiculosComponent implements OnInit {
 
-  public vehiculos: Vehiculo[] = [];
+  public nombreBusqueda:string="";
+  public vehiculosListaCompleta: Vehiculo[] = [];
+  public vehiculos:Vehiculo[]=[];
 
   constructor(private clienteWS: ClienteWSService) {
   }
 
   ngOnInit(): void {
+    /*
     this.clienteWS.findAll().subscribe(
       datos => {
         this.vehiculos = datos;
@@ -22,10 +26,12 @@ export class ListadoVehiculosComponent implements OnInit {
       }
     );
     //HACER COSAS MIENTRAS ESPERO
-
-    /*this.clienteWS.findAll().subscribe({
+    */
+    let outer = this;
+    this.clienteWS.findAll().subscribe({
       next(data) {
-        this.vehiculos = data;
+        outer.vehiculos = data;
+        outer.vehiculosListaCompleta = data;
       },
       complete() {
         console.warn("COMPLETE");
@@ -33,7 +39,13 @@ export class ListadoVehiculosComponent implements OnInit {
       error(err) {
         console.error("ERROR:" + err);
       }
-    });*/
+    });
+    this.clienteWS.findAll().subscribe();
   }
-
+  
+  filtrar():void {
+    this.vehiculos = this.vehiculosListaCompleta.filter(vehiculo => 
+      vehiculo.nombre.toUpperCase().indexOf(this.nombreBusqueda.toUpperCase())>-1);
+  }
+  
 }

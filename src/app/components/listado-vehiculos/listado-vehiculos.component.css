@@ -1,7 +1,11 @@
 main {
-    width: 700px;
+    width: 1400px;
     margin: auto;
 }
-article {
-    width: 100%;
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
+  

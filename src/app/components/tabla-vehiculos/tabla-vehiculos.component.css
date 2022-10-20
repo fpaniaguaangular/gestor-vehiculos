@@ -2,4 +2,7 @@ main {
     width: 800px;
     margin: auto;
 }
+td {
+    padding: 10px !important;
+}
 

@@ -1,0 +1,20 @@
+.card {
+    height: 420px;
+    background-color: rgb(0, 77, 71);
+    color:white;
+    margin-bottom: 10px;
+    padding: 1em;
+    box-shadow: 2px 2px #888;
+    overflow: hidden;
+ }
+
+ .card:hover {
+    background-color: rgb(21, 62, 152);
+    color:white;
+    cursor: pointer;
+ }
+
+ .id {
+    font-size: 2em;
+    margin-bottom: 20px;
+ }

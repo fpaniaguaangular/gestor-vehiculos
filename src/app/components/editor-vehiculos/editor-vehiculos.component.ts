@@ -17,6 +17,8 @@ export class EditorVehiculosComponent implements OnInit {
     this.ar.params.subscribe(params=>{
       this.vehiculo.id=params['id'];
       this.vehiculo.nombre=params['nombre'];
+      this.vehiculo.descripcion=params['descripcion'];
+      this.vehiculo.imagen=params['imagen'];
     });
   }
 

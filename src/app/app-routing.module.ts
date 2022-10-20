@@ -3,12 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { C404Component } from './components/c404/c404.component';
 import { CreadorVehiculosComponent } from './components/creador-vehiculos/creador-vehiculos.component';
 import { EditorVehiculosComponent } from './components/editor-vehiculos/editor-vehiculos.component';
+import { ListadoVehiculosSecuencialComponent } from './components/listado-vehiculos-secuencial/listado-vehiculos-secuencial.component';
 import { ListadoVehiculosComponent } from './components/listado-vehiculos/listado-vehiculos.component';
 import { TablaVehiculosComponent } from './components/tabla-vehiculos/tabla-vehiculos.component';
 
 const routes: Routes = 
   [
     {path:"listado",component:ListadoVehiculosComponent,pathMatch:'prefix'},
+    {path:"listado-secuencial",component:ListadoVehiculosSecuencialComponent,pathMatch:'prefix'},
     {path:"listado-tabla",component:TablaVehiculosComponent,pathMatch:'prefix'},
     {
       path:"crear",
@@ -16,7 +18,7 @@ const routes: Routes =
       pathMatch:'prefix'
     },
     {
-      path:"editar/:id/:nombre",
+      path:"editar/:id/:nombre/:descripcion/:imagen",
       component:EditorVehiculosComponent,
       pathMatch:'prefix'
     },

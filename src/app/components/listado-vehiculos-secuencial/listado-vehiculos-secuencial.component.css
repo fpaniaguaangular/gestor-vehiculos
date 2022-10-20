@@ -1,0 +1,35 @@
+main {
+    width: 1400px;
+    margin: auto;
+}
+article {
+    width: 100%;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+ }
+  
+ .card {
+    flex: 0 1 calc(30% - 1em);
+    height: 420px;
+    background-color: rgb(27, 32, 71);
+    color:white;
+    margin-bottom: 10px;
+    padding: 1em;
+    box-shadow: 2px 2px #888;
+    overflow: hidden;
+ }
+
+ .card:hover {
+    background-color: rgb(21, 62, 152);
+    color:white;
+    cursor: pointer;
+ }
+
+ .id {
+    font-size: 2em;
+    margin-bottom: 20px;
+ }
