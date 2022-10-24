@@ -13,5 +13,4 @@ export class MenuPrincipalComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

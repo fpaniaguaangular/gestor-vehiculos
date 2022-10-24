@@ -18,12 +18,21 @@
                 <input matInput [(ngModel)]="vehiculo.imagen">
             </mat-form-field>
         </div>
+        <div class="error" *ngIf="mensajeError">{{mensajeError}}</div>
         <div id="contenedor-boton">
             <button mat-raised-button color="accent" (click)="cancelar()">Cancelar</button>
             &nbsp;
             <button mat-raised-button color="primary" (click)="guardar()">Guardar</button>
             &nbsp;
-            <button mat-raised-button color="primary" (click)="eliminar()">Eliminar</button>
+            <button mat-raised-button color="primary" (click)="solicitarConfirmacionEliminado()">Eliminar</button>
         </div>
     </div>
 </main>
+
+<div id="ventana-confirmacion" *ngIf="ventanaConfirmacionVisible">
+    <div id="mensaje">¿Desea eliminar el vehículo?</div>
+    <div id="botones">
+        <button mat-raised-button color="primary" (click)="eliminar()" >Confirmar</button>
+        <button mat-raised-button color="accent" (click)="ocultarVentana()">Cancelar</button>
+    </div>
+</div>

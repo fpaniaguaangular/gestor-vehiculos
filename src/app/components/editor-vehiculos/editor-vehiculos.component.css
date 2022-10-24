@@ -15,3 +15,37 @@ mat-form-field {
 main {
     clear: both;
 }
+
+.error {
+    color: red;
+}
+
+#ventana-confirmacion {
+    position: fixed;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    
+    width: 400px;
+    height: 150px;
+    background-color: rgb(52, 51, 53);
+
+    box-shadow: 10px 10px 7px 1px #BBBBBB;
+}
+
+#mensaje {
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+    font-size: larger;
+}
+#botones {
+    padding-top: 55px;
+    position: relative;
+    bottom: 10px;
+    text-align: center;
+}
+#botones button {
+    margin-right: 10px;
+    margin-left: 10px;
+}

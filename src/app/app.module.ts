@@ -21,6 +21,12 @@ import {MatTableModule} from '@angular/material/table';
 import { EditorVehiculosComponent } from './components/editor-vehiculos/editor-vehiculos.component';
 import { ListadoVehiculosSecuencialComponent } from './components/listado-vehiculos-secuencial/listado-vehiculos-secuencial.component';
 import { FichaVehiculoComponent } from './components/ficha-vehiculo/ficha-vehiculo.component';
+import { CabeceraComponent } from './components/cabecera/cabecera.component';
+import { MayusculasDirective } from './directives/mayusculas.directive';
+import { AyudaPrincipalComponent } from './components/ayuda-principal/ayuda-principal.component';
+import { AyudaNivel21Component } from './components/ayuda-nivel21/ayuda-nivel21.component';
+import { AyudaNivel22Component } from './components/ayuda-nivel22/ayuda-nivel22.component';
+import { NoAutorizadoComponent } from './components/no-autorizado/no-autorizado.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +39,12 @@ import { FichaVehiculoComponent } from './components/ficha-vehiculo/ficha-vehicu
     EditorVehiculosComponent,
     ListadoVehiculosSecuencialComponent,
     FichaVehiculoComponent,
+    CabeceraComponent,
+    MayusculasDirective,
+    AyudaPrincipalComponent,
+    AyudaNivel21Component,
+    AyudaNivel22Component,
+    NoAutorizadoComponent,
   ],
   imports: [
     BrowserModule,

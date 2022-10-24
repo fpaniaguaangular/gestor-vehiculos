@@ -29,7 +29,8 @@ export class TablaVehiculosComponent implements OnInit {
     //Creando el path con TEMPLATE LITERAL
     //this.enrutador.navigate([`/editar/${vehiculo.id}/${vehiculo.nombre}/${vehiculo.descripcion}/${vehiculo.imagen}`]);
     //Creando el path con TEMPLATE LITERAL - Se asigna un nombre de imagen en 'hardcode' porque las barras (/) de la URL de la imagen provocan error
-    this.enrutador.navigate([`/editar/${vehiculo.id}/${vehiculo.nombre}/${vehiculo.descripcion}/notfound.png`]);
+    let urlImagen = vehiculo.imagen.replaceAll("/","*");
+    this.enrutador.navigate([`/editar/${vehiculo.id}/${vehiculo.nombre}/${vehiculo.descripcion}/${urlImagen}`]);
   }
 
 }
